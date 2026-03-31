@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Factory Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🏭 Smart Factory Analyzer</h1>
+
+  <!-- INPUT -->
+  <div class="card glass">
+    <h2>Input</h2>
+
+    <input type="number" id="time" placeholder="Machine Hours">
+    <input type="number" id="energy" placeholder="Energy Used (kWh)">
+    <input type="number" id="products" placeholder="Products Made">
+
+    <button onclick="calculate()">Analyze</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="card glass">
+    <h2>Results</h2>
+
+    <p>⚡ Energy/Product: <span id="ep">-</span></p>
+    <p>⏱ Time/Product: <span id="tp">-</span></p>
+
+    <!-- Circular Progress -->
+    <div class="circle">
+      <span id="eff">0%</span>
+    </div>
+  </div>
+
+  <!-- SUGGESTION -->
+  <div class="card glass">
+    <h2>Suggestions</h2>
+    <p id="suggestion">-</p>
+  </div>
+
+  <!-- CHART -->
+  <div class="card glass">
+    <h2>Analytics</h2>
+    <canvas id="chart"></canvas>
+  </div>
+
+</div>
+
+<!-- HISTORY -->
+  <div class="card glass">
+    <h2>History</h2>
+    <ul id="history"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- AI CHAT -->
+<div class="card glass">
+  <h2>🤖 AI Assistant</h2>
+  
+  <input type="text" id="question" placeholder="Ask something...">
+  <button onclick="askAI()">Ask</button>
+  
+  <p id="answer"></p>
+</div>
+
+
+  
